@@ -1,0 +1,25 @@
+
+/*RESET*/
+*,::before,::after {margin: 0; padding: 0; border: 0 solid transparent; outline: 0 solid transparent; background: transparent none center center no-repeat; box-sizing: border-box;}
+h1,h2,h3,h4,h5,h6 {font-size: inherit; font-weight: inherit;}
+i,em,address {font-style: inherit;}
+ol,ul {list-style: none;}
+a {color: inherit; text-decoration: inherit;}
+label,button,[type=button],[type=submit],[type=reset],a {cursor: pointer;}
+img {display: block;}
+table {table-layout: fixed; border-collapse: collapse;}
+
+/*CLASS*/
+.hidden {display: none;}
+.bold {font-weight: 400;}
+.ellipsis {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.inner:after,
+.clearfix:after {content: ""; display: block; clear: both;}
+
+/*GLOVAL*/
+body { font-family: 'Noto Sans KR', sans-serif;}
+.inner {position: relative; margin: 0 auto; max-width: 1280px; padding: 0 40px;}
+[type=checkbox],[type=radio] {display: none;}
+	
+/*edit*/
+section {background-color: #eef0f1}

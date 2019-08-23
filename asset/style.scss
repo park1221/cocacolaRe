@@ -1,0 +1,98 @@
+$red : #f00009;
+
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    background-color: transparent;
+    .logo{
+        float: left;
+        margin-left: 10%;
+
+    }
+    .menu{
+        
+        ul{
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            width: auto;
+            li{
+                padding: 0 46px;
+                float: left;
+                a{
+                    letter-spacing:3px;
+                    font-size: 16px;
+                    color: #ddd
+                    
+
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    position: relative;
+    background-color: $red;
+    height: 160px;
+    // background: url(../img/coca-footer-bgi.png);
+    h2{
+        float: left;
+        width: 30%;
+        padding-top: 4%;
+        padding-left: 12%;
+
+    }
+    .footer-contents{
+          float: right;
+          padding-top: 38px;
+          width: 70%;
+          height: 160px;
+        
+        .sns-icon{
+            width: 100%;
+            li{
+                float: right;
+                margin-left: 2%;
+            }
+        }
+        .bottom-util{
+            padding-top: 45px;
+            li{
+                float: right;
+                padding-left: 2%;
+                a{
+                    font-size: 14px;
+                }
+
+            }
+        }
+        .copy{
+            float: right;
+            padding-top: 8px;
+            font-size: 13px;
+        }
+    }
+}
+
+
+#container {
+    height: 2000px;
+    
+    .visual{
+        background: url("../img/img(5).jpg")50% 0 no-repeat;
+        height: 1041px;
+    }
+    .swiper-cintainer{
+        width: 100%;
+        height: 300px;
+        margin: 20px 0;
+        .swiper-slide{
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+}

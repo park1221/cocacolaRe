@@ -1,0 +1,99 @@
+header {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  background-color: transparent;
+}
+
+header .logo {
+  float: left;
+  margin-left: 10%;
+}
+
+header .menu ul {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: auto;
+}
+
+header .menu ul li {
+  padding: 0 46px;
+  float: left;
+}
+
+header .menu ul li a {
+  letter-spacing: 3px;
+  font-size: 16px;
+  color: #ddd;
+}
+
+footer {
+  position: relative;
+  background-color: #f00009;
+  height: 160px;
+}
+
+footer h2 {
+  float: left;
+  width: 30%;
+  padding-top: 4%;
+  padding-left: 12%;
+}
+
+footer .footer-contents {
+  float: right;
+  padding-top: 38px;
+  width: 70%;
+  height: 160px;
+}
+
+footer .footer-contents .sns-icon {
+  width: 100%;
+}
+
+footer .footer-contents .sns-icon li {
+  float: right;
+  margin-left: 2%;
+}
+
+footer .footer-contents .bottom-util {
+  padding-top: 45px;
+}
+
+footer .footer-contents .bottom-util li {
+  float: right;
+  padding-left: 2%;
+}
+
+footer .footer-contents .bottom-util li a {
+  font-size: 14px;
+}
+
+footer .footer-contents .copy {
+  float: right;
+  padding-top: 8px;
+  font-size: 13px;
+}
+
+#container {
+  height: 2000px;
+}
+
+#container .visual {
+  background: url("../img/img(5).jpg") 50% 0 no-repeat;
+  height: 1041px;
+}
+
+#container .swiper-cintainer {
+  width: 100%;
+  height: 300px;
+  margin: 20px 0;
+}
+
+#container .swiper-cintainer .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+}
+/*# sourceMappingURL=style.css.map */
