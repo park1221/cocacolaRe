@@ -87,6 +87,16 @@ footer .footer-contents .copy {
   background: url("../img/bgi_section2.jpg") no-repeat;
 }
 
+#container .brand-slide h2 {
+  font-size: 2.187rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 25%;
+  left: 34%;
+  z-index: 6;
+}
+
 #container .brand-slide .swiper-container {
   margin: 20px 0;
   padding-top: 30%;
@@ -114,13 +124,39 @@ footer .footer-contents .copy {
   align-items: center;
 }
 
-.sub-title {
-  position: absolute;
-  top: 25%;
-  left: 34%;
+#container .news-area {
+  height: 980px;
+}
+
+#container .news-area .news {
+  width: 45%;
+}
+
+#container .news-area .news h2 {
   font-size: 2.187rem;
   font-weight: 300;
   letter-spacing: 3px;
-  z-index: 6;
+  padding-bottom: 3%;
+}
+
+#container .news-area .news ul li .text-area {
+  padding-top: 15px;
+  text-align: center;
+}
+
+#container .news-area .news ul li .text-area h4 {
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+}
+
+#container .news-area .news ul li .text-area .desc {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.125rem;
+  color: #797979;
+}
+
+#container .news-area:nth-child(2) {
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */
