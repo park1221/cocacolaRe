@@ -1,4 +1,6 @@
 $red : #f00009;
+$mouse-color: #fff;
+
 @mixin sub-h2{
     font-size: 2.187rem;
     font-weight: 300;
@@ -24,15 +26,18 @@ header {
             left: 30%;
             width: auto;
             li{
+              
                 padding: 0 46px;
                 float: left;
+                color: #ddd;
+                &::hover{
+                    color: $red;
+                }
                 a{
                     letter-spacing:3px;
                     font-size: 16px;
-                    color: #ddd
-                    
-
                 }
+            
             }
         }
     }
@@ -85,10 +90,60 @@ footer {
 
 
 #container {
-
      .visual{
         background: url("../img/img(5).jpg")50% 0 no-repeat;
-        height: 1041px;
+        height: 980px;
+        .mouse{
+            width: 35px;
+            height: 50px;
+            border-radius: 13px;
+            border: 2px solid $mouse-color;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &:before{
+                content: '';
+                width: 3px;
+                height: 5px;
+                background: $mouse-color;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                animation: scrollDown 1.2s ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            .mouse-arrow{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $mouse-color;
+                width: 5px;
+                height: 2px;
+                animation: fading 1.2s ease;
+                animation-iteration-count: infinite;
+                &:last-child{
+                width: 0;
+                height: 0;
+                background-color: transparent;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 3px solid $mouse-color;
+                }
+
+                @for $i from 1 through 3{
+                    &:nth-child(#{$i}) {
+                        animation-delay: ($i * .4s) - .4s;
+                        bottom: -2px - (6px * $i);
+                    }
+        
+                }
+			
+	
+            }
+        }
     }
     .brand-slide{
         height: 980px;
@@ -134,7 +189,7 @@ footer {
     }
 
     .news-area{ 
-        height: 980px; //height 값 잡히면 지우기
+       padding-bottom: 5%;
         .news{
             width: 45%;
             h2{
@@ -144,11 +199,7 @@ footer {
             ul{
                 
                 li{
-                    .img{
-                        a{
-
-                        }
-                    }
+                    
                     .text-area{
                         padding-top: 15px;
                         text-align: center;
@@ -168,16 +219,62 @@ footer {
 
                 }
             }
-
-        }
         &:nth-child(2){
-            float: right;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
         }
-
-      
     }
-    
+    .community{
+        width: 100%;
+        height: 980px;
+        .sub-title{
+            @include sub-h2;
+            position: absolute;
+            top: 25%;
+            left: 40%;
+            z-index: 6;
+        }
+        ul{
+            margin: 0 auto;
+            padding-top: 25%;
+            width: 100%;
+            li{               
+                margin-left: 3%;
+                float: left;
+                
+                
+                img{
+                    width: 250px;   
+                    height: 250px;
+                }
+            }
+        }
+        .foot-img{
+            position: absolute;
+            background: url(../img/coca-footer-bgi.png);
+            width: 100%;
+            height: 642px;
+        }
+    }
 }
 
 
+@keyframes scrollDown{
+    0%
+        {transform: translate(-50%, 0)}
+    70%, 90%
+		{transform: translate(-50%, 100%)}
+	100%
+        {transform: translate(-50%, 0)}
+    }
 
+@keyframes fading{
+    0%
+		{opacity: 1}
+	50%
+		{opacity: .3}
+	100%
+        {opacity: 1}
+    }

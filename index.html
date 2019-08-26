@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./asset/common.css">
     <link rel="stylesheet" href="./asset/swiper.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+
+
 </head>
 <body>
     <header>
@@ -26,13 +30,19 @@
         </div>
     </header>
     <div id="container">
-        <section class="visual"></section>
+        <section class="visual">
+            <div class="mouse">
+                <div class="mouse-arrow"></div>
+                <div class="mouse-arrow"></div>
+                <div class="mouse-arrow"></div>
+            </div>              
+        </section>
         <section class="brand-slide">
             <div class="inner">       
                 <h2 class="sub-title">
                     <a href="#">Coca-Cola <span class="bold">BRAND</span></a>
                 </h2>
-                <div class="swiper-container swiper">  
+                <div class="swiper-container swiper myItem">  
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="./img/brand_logo01.png" alt="cocacola">
@@ -47,16 +57,16 @@
                             <img src="./img/brand_logo04.png" alt="sprite">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/brand_logo01.png" alt="">
+                            <img src="./img/brand_logo05.png" alt="minute maid">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/brand_logo02.png" alt="">
+                            <img src="./img/brand_logo06.png" alt="vatamin warter">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/brand_logo03.png" alt="">
+                            <img src="./img/brand_logo07.png" alt="smart water">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/brand_logo04.png" alt="">
+                            <img src="./img/brand_logo08.png" alt="gold peak">
                         </div>
                     </div><!-- swiper-wrapper -->
                     <div class="swiper-pagination swiper-pagination1"></div>
@@ -64,15 +74,15 @@
             </div><!--inner -->
         </section>        <!-- brand-slide -->
         <section class="news-area">
-            <div class="inner">
+            <div class="inner myItem">
                 <div class="news">
-                    <h2>
+                    <h2 class="myItem">
                         <a href="#">Coca-Cola <span class="bold">STORY</span></a>
                     </h2>
                     <ul>
                         <li>
                             <div class="img">
-                                <a href="#"><img src="./img/story011.png" alt=""></a>
+                                <a href="#"><img src="./img/story01.png" alt=""></a>
                             </div>
                             <div class="text-area">
                                 <h4>1급 기밀! <span style="color: #f00009">코카-콜라 제조법</span>에 담긴 비밀은?</h4>
@@ -84,7 +94,7 @@
                         </li>
                         <li>
                             <div class="img">
-                                <a href="#"><img src="./img/story011.png" alt=""></a>
+                                <a href="#"><img src="./img/story02.png" alt=""></a>
                             </div>
                             <div class="text-area">
                                 <h4>1985년 <span style="color: #f00009">뉴코-크 출시</span>는 왜 실패했나?</h4>
@@ -97,28 +107,28 @@
                     </ul>
                 </div>
                 <div class="news">
-                    <h2>
+                    <h2 class="myItem">
                         <a href="#">Coca-Cola <span class="bold">LIFE</span></a>
                     </h2>
                     <ul>
                         <li>
                             <div class="img">
-                                <a href="#"><img src="./img/story011.png" alt=""></a>
+                                <a href="#"><img src="./img/story03.png" alt=""></a>
                             </div>
                             <div class="text-area">
-                                <h4>1급 기밀! <span style="color: #f00009">코카-콜라 제조법</span>에 담긴 비밀은?</h4>
+                                <h4><span style="color: #f00009">코카-콜라 슬러시 자판기</span>, 드디어 한국 출시!</h4>
                                 <div class="desc">
-                                    <p>1886년 존 펨버넌 박사가 코카-콜라를 발명한 이후, </p>
-                                    <p>코카-콜라의 제조법은 철처히 비밀에 부쳐져왔다.</p>
+                                    <p>일본에서만 볼 수 있었던 코카-콜라 슬러시 자판기가</p>
+                                    <p>드디어 한국에도 출시됐다.</p>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <div class="img">
-                                <a href="#"><img src="./img/story011.png" alt=""></a>
+                            <div class="img" style="border: 1px solid #ddd;">
+                                <a href="#"><img src="./img/story04.png" alt=""></a>
                             </div>
                             <div class="text-area">
-                                <h4>1985년 <span style="color: #f00009">뉴코-크 출시</span>는 왜 실패했나?</h4>
+                                <h4><span style="color: #f00009">[인터뷰]</span>부부가 함께 만든 박물관 카페, 카페콜라!</h4>
                                 <div class="desc">
                                     <p>99년간 유지해왔던 코카-콜라 레시피를 변경해</p>
                                     <p>'뉴코-크'라는 신제품을 출시  하였다.</p>
@@ -127,8 +137,21 @@
                         </li>
                     </ul>
                 </div>
+                
             </div><!-- .inner -->
         </section>    
+        <section class="community">
+            <div class="inner">
+                <h2 class="sub-title"><a href="#"><span class="bold">COMMUNITY</span></a></h2>
+                <ul class="clearfix myItem">
+                    <li><img src="./img/comu01.jpg" alt="comu01"></li>
+                    <li><img src="./img/comu02.jpg" alt="comu02"></li>
+                    <li><img src="./img/comu03.jpg" alt="comu03"></li>
+                    <li><img src="./img/comu04.jpg" alt="comu04"></li>
+                </ul>
+            </div>
+            <div class="foot-img"></div>
+        </section>
     </div><!-- container --> 
     <footer>
         <div class="inner">
@@ -155,18 +178,69 @@
     </footer>
     <script src="./asset/swiper.min.js"></script>
     <script>
-            var swiper1 = new Swiper('.swiper', {
-              slidesPerView: 4,
-              spaceBetween: 30,
-              autoplay: {
-                delay : 3000,
-              }
-              // pagination: {
-              //   el: '.swiper-pagination1',
-              //   clickable: true,
-              // },
-            });
+        var swiper1 = new Swiper('.swiper', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            autoplay: {
+            delay : 3000,
+            }
+            // pagination: {
+            //   el: '.swiper-pagination1',
+            //   clickable: true,
+            // },
+        });
         
+
+            $.fn.myAnimation = function(custom){
+                
+                var o = this;
+                var itemArr = [];
+                var op;
+                custom.opacity?op=0:op=1;
+                for(var i=0; i<this.length; i++){
+
+                    var t = $(o[i]).offset().top;
+                    itemArr.push(t);
+                }
+
+                var anim = {
+                    init : function(){
+
+                        o.css({
+                            'position' : 'relative',
+                            'top' : custom.distance,
+                            'opacity' : op
+                        });
+                    },
+                    action : function(idx){
+
+                        $(o[idx]).animate({'top' : 0, 'opacity' : 1}, custom.speed);
+                    }
+                }
+
+                anim.init();
+
+                $(window).on('scroll', function(){
+
+                    var baseline = $(this).scrollTop()+innerHeight;
+
+                    for(var i=0; i<o.length; i++){
+
+                        if (baseline > itemArr[i]) {
+                            anim.action(i);
+                        }
+                    }
+
+                }).scroll();
+
+            }
+
+            $('.myItem').myAnimation({
+                opacity : true,
+                speed : 1000,
+                distance :850
+            });
+                
           </script>
 </body>
 </html>
