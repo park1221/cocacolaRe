@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="./asset/swiper.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 
 
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="inner">
             <h1 class="logo"><a href="#"><img src="./img/logo2.png" alt="cocacola"></a></h1>
             <nav class="menu">
@@ -178,6 +177,20 @@
     </footer>
     <script src="./asset/swiper.min.js"></script>
     <script>
+
+    $(document).ready(function(){
+
+        let hdOffset=$('.header').offset();
+        
+        $(window).scroll(function(){
+            if($(document).scrollTop()>hdOffset.top){
+                $('.header').addClass('add-css');
+            }else{
+                $('.header').removeClass('add-css');
+            }
+        });
+    })
+        
         var swiper1 = new Swiper('.swiper', {
             slidesPerView: 4,
             spaceBetween: 30,
@@ -189,8 +202,8 @@
             //   clickable: true,
             // },
         });
-        
 
+        //swiper slide java script
             $.fn.myAnimation = function(custom){
                 
                 var o = this;
@@ -240,7 +253,9 @@
                 speed : 1000,
                 distance :850
             });
-                
+            //스크롤 됐을 때 나타나는 애니메이션 
+
+            
           </script>
 </body>
 </html>
